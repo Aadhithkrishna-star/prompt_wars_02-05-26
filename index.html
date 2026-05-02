@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncSpace - Team Coordination</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">S</div>
+                <h2>SyncSpace</h2>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active">
+                    <span class="icon">📋</span> Board
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">📊</span> Analytics
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="icon">⚙️</span> Settings
+                </a>
+            </nav>
+            <div class="user-profile">
+                <img src="https://ui-avatars.com/api/?name=Alex+Doe&background=0D8ABC&color=fff" alt="User" class="avatar">
+                <div class="user-info">
+                    <span class="name">Alex Doe</span>
+                    <span class="role">Product Manager</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content (Kanban) -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-left">
+                    <h1>Project Alpha</h1>
+                    <span class="badge">Active</span>
+                </div>
+                <div class="header-right">
+                    <button class="btn-primary">+ New Task</button>
+                </div>
+            </header>
+
+            <div class="board-container">
+                <!-- Column: To Do -->
+                <div class="board-column" id="col-todo" data-status="todo">
+                    <div class="column-header">
+                        <h3>To Do <span class="task-count">3</span></h3>
+                    </div>
+                    <div class="task-list" id="list-todo">
+                        <!-- Tasks go here -->
+                    </div>
+                </div>
+
+                <!-- Column: In Progress -->
+                <div class="board-column" id="col-progress" data-status="progress">
+                    <div class="column-header">
+                        <h3>In Progress <span class="task-count">2</span></h3>
+                    </div>
+                    <div class="task-list" id="list-progress">
+                    </div>
+                </div>
+
+                <!-- Column: Review -->
+                <div class="board-column" id="col-review" data-status="review">
+                    <div class="column-header">
+                        <h3>Review <span class="task-count">1</span></h3>
+                    </div>
+                    <div class="task-list" id="list-review">
+                    </div>
+                </div>
+
+                <!-- Column: Done -->
+                <div class="board-column" id="col-done" data-status="done">
+                    <div class="column-header">
+                        <h3>Done <span class="task-count">4</span></h3>
+                    </div>
+                    <div class="task-list" id="list-done">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel (Activity Feed) -->
+        <aside class="right-panel">
+            <div class="panel-header">
+                <h3>Activity</h3>
+                <button class="btn-icon">💬</button>
+            </div>
+            <div class="activity-feed" id="activity-feed">
+                <!-- Activity Items go here -->
+            </div>
+            <div class="chat-input-container">
+                <input type="text" placeholder="Type a message..." class="chat-input">
+                <button class="btn-send">➤</button>
+            </div>
+        </aside>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
